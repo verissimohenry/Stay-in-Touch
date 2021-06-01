@@ -6,7 +6,7 @@ class Friendss < ApplicationRecord
   def confirm_friend
     update_attributes(confirmed: true)
     Friendss.create!(friend_id: user_id,
-                       user_id: friend_id,
-                       confirmed: true)
+                     user_id: friend_id,
+                     confirmed: true)
   end
 end
