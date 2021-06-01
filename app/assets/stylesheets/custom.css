@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -385,6 +386,7 @@ form .actions.reset input[type="submit"] {
   form {
     width: 60%;
   }
+
   .new_post,
   .timeline,
   .users-section,
@@ -397,6 +399,7 @@ form .actions.reset input[type="submit"] {
   form {
     width: 40%;
   }
+
   .new_post,
   .timeline,
   .users-section,
