@@ -39,10 +39,10 @@ class User < ApplicationRecord
   end
 
   def friend?(user)
-    friends.include?(user)
+    friendss.include?(user)
   end
 
   def friends_and_own_posts
-    Post.where(user: (friends.to_a << self))
+    Post.where(user: (friendss.to_a << self))
   end
 end
