@@ -57,14 +57,14 @@ module ApplicationHelper
       link_to('Cancel request', friendss_path(friend), class: 'btn btn-outline-danger btn-sm ml-3', method: :delete)
 
     else
-      link_to('Add friend', friendss_path(user), class: 'btn btn-outline-success btn-sm ml-3', method: :post)
+      link_to('Add friend', friendsses_path(user), class: 'btn btn-outline-success btn-sm ml-3', method: :post)
     end
   end
 
   def unfriend_btn(user)
     friend = Friendss.where(user_id: [current_user.id,
-                                      user.id]).where(friend_id: [current_user.id,
-                                                                  user.id]).where(confirmed: true).first
+                                        user.id]).where(friend_id: [current_user.id,
+                                                                    user.id]).where(confirmed: true).first
     link_to('Unfriend', friendss_path(friend), class: 'btn btn-outline-danger btn-sm ml-3', method: :delete)
   end
 
@@ -79,7 +79,7 @@ module ApplicationHelper
     return unless current_user.id == current.id
 
     friend = Friendss.where(user_id: user.id).where(friend_id: current_user.id).first
-    link_to('Accept', friendss_path(friend), class: 'btn btn-outline-success btn-sm ml-3', method: :patch)
+    link_to('Accept', friendship_path(friend), class: 'btn btn-outline-success btn-sm ml-3', method: :patch)
   end
 
   def pending_header(user)
