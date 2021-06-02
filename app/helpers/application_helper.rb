@@ -79,7 +79,7 @@ module ApplicationHelper
     return unless current_user.id == current.id
 
     friend = Friendss.where(user_id: user.id).where(friend_id: current_user.id).first
-    link_to('Accept', friendship_path(friend), class: 'btn btn-outline-success btn-sm ml-3', method: :patch)
+    link_to('Accept', friendss_path(friend), class: 'btn btn-outline-success btn-sm ml-3', method: :patch)
   end
 
   def pending_header(user)
