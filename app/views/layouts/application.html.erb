@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>RorSocialScaffold</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -8,14 +9,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
+</head>
+
+<body>
     <nav class="nav">
-      <%= link_to 'Stay in touch', root_path %>
-      <div class="menu">
-        <div class="menu-item">
-          <%= menu_link_to 'Timeline', posts_path %>
+        <%= link_to 'Stay in touch', root_path %>
+        <div class="menu">
+            <div class="menu-item">
+                <%= menu_link_to 'Timeline', posts_path %>
+            </div>
+            <div class="menu-item">
+                <%= menu_link_to 'All users', users_path %>
+            </div>
+            <div class="menu-item">
+                <%= user_page_btn %>
+            </div>
         </div>
+
         <div class="menu-item">
           <%= menu_link_to 'All users', users_path %>
         </div>
@@ -26,6 +36,7 @@
       <%= sign_out_btn %>
       <%= sign_in_btn %>
     </nav>
+
     <%= notice_con1 %>
     <p> <%= notice_con %> </p>
     <%= closing_div%>
@@ -33,7 +44,8 @@
     <p> <%= alert_con %> </p>
     <%= closing_div%>
     <main class="main">
-      <%= yield %>
+        <%= yield %>
     </main>
-  </body>
+</body>
+
 </html>
