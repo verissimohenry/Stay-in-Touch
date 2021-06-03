@@ -49,37 +49,35 @@ module ApplicationHelper
   end
 
   def friend_or_unfriend_btn(user)
-    @check = Friendship.where(user_id: user.id).where(friend_id: current_user.id).first
+    @check = Friendss.where(user_id: user.id).where(friend_id: current_user.id).first
     return unless user.id != current_user.id && !@friends && !@check && !user.friends.include?(current_user)
 
-    friend = Friendship.where(user_id: current_user.id).where(friend_id: user.id).where(confirmed: nil).first
+    friend = Friendss.where(user_id: current_user.id).where(friend_id: user.id).where(confirmed: nil).first
     if friend
-      link_to('Cancel request', friendship_path(friend), class: 'btn btn-outline-danger btn-sm ml-3', method: :delete)
+      link_to('Cancel request', friendss_path(friend), class: 'btn btn-outline-danger btn-sm ml-3', method: :delete)
 
     else
-      link_to('Add friend', friendships_path(user), class: 'btn btn-outline-success btn-sm ml-3', method: :post)
+      link_to('Add friend', friendsses_path(user), class: 'btn btn-outline-success btn-sm ml-3', method: :post)
     end
   end
 
   def unfriend_btn(user)
-    friend = Friendship.where(user_id: [current_user.id,
-                                        user.id]).where(friend_id: [current_user.id,
-                                                                    user.id]).where(confirmed: true).first
-    link_to('Unfriend', friendship_path(friend), class: 'btn btn-outline-danger btn-sm ml-3', method: :delete)
+    friend = Friendss.where(user_id: [current_user.id,
+                                      user.id]).where(friend_id: [current_user.id,
+                                                                  user.id]).where(confirmed: true).first
+    link_to('Unfriend', friendss_path(friend), class: 'btn btn-outline-danger btn-sm ml-3', method: :delete)
   end
 
   def decline_btn(user, current)
     return unless current_user.id == current.id
-
-    friend = Friendship.where(user_id: user.id).where(friend_id: current_user.id).first
-    link_to('Cancel', friendship_path(friend), class: 'btn btn-outline-danger btn-sm ml-3', method: :delete)
+    friend = Friendss.where(user_id: user.id).where(friend_id: current_user.id).first
+    link_to('Cancel', friendss_path(friend), class: 'btn btn-outline-danger btn-sm ml-3', method: :delete)
   end
 
   def accept_btn(user, current)
     return unless current_user.id == current.id
-
-    friend = Friendship.where(user_id: user.id).where(friend_id: current_user.id).first
-    link_to('Accept', friendship_path(friend), class: 'btn btn-outline-success btn-sm ml-3', method: :patch)
+    friend = Friendss.where(user_id: user.id).where(friend_id: current_user.id).first
+    link_to('Accept', friendss_path(friend), class: 'btn btn-outline-success btn-sm ml-3', method: :patch)
   end
 
   def pending_header(user)
