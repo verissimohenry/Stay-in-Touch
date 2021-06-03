@@ -2,7 +2,7 @@
 
 # Stay in touch
 
-In this stay in touch project we are about to create a simple website where users can share posts and create relationship between then. the project is still in the development process. 
+In this stay in touch project we are about to create a simple website where users can share posts and create relationship between then. the project is still in the development process.
 
 ## Built With
 
@@ -10,6 +10,10 @@ In this stay in touch project we are about to create a simple website where user
 - Active Record
 - Bootstrap 4
 - Ruby
+
+## Live Demo
+
+[Live demo](https://peaceful-stream-34920.herokuapp.com/)
 
 ## Getting Started
 
@@ -26,6 +30,7 @@ $ git clone git@github.com:verissimohenry/Stay-in-Touch.git
 ```
 $ cd ror-social-scaffold
 ```
+
 ## Prerequisites
 
 Ruby: 2.6.3
@@ -64,7 +69,7 @@ Open `http://localhost:3000/` in your browser.
 - Github: [@githubhandle](https://github.com/verissimohenry)
 - Twitter: [@twitterhandle](https://twitter.com/verissimohenry)
 - Linkedin: [linkedin](https://www.linkedin.com/in/henry-verissimo-618906167/)
-- Email:  verissimohenry04@gmail.com
+- Email: verissimohenry04@gmail.com
 
 ## Show your support
 
