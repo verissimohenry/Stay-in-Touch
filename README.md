@@ -4,7 +4,7 @@
 
 Stay in touch project we are about to create a simple website where users can share posts and create relationships between them. the project is still in the development process.
 
-![screenshot](images/image1.png)
+![screenshot](image.png)
 ![screenshot](images/image2.png)
 ![screenshot](images/image3.png)
 
