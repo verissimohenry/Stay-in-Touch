@@ -5,7 +5,7 @@
 Stay in touch project we are about to create a simple website where users can share posts and create relationships between them. the project is still in the development process.
 
 ![screenshot](https://github.com/verissimohenry/Stay-in-Touch/blob/master/app/assets/images/image.png)
-![screenshot](images/image2.png)
+![screenshot](https://github.com/verissimohenry/Stay-in-Touch/blob/master/app/assets/images/image2.png)
 ![screenshot](images/image3.png)
 
 ## Built With
