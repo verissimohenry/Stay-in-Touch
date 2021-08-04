@@ -2,7 +2,7 @@
 
 # Stay in touch
 
-Stay in touch project we are about to create a simple website where users can share posts and create relationships between them. the project is still in the development process.
+Stay in touch project is a simple website where users can share posts and create relationships between them follow others and be followed by others, is a app build to connect with people from anywhere around the world.
 
 ![screenshot](https://github.com/verissimohenry/Stay-in-Touch/blob/master/app/assets/images/image.png)
 ![screenshot](https://github.com/verissimohenry/Stay-in-Touch/blob/master/app/assets/images/image2.png)
